@@ -1,0 +1,303 @@
+/* layout.css
+    Responsive layout & base styles for a simple site
+    Place this in /C:/Users/user/Desktop/wdd131/week01/styles/layout.css
+*/
+
+/* Box sizing and sensible defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color palette */
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+  --muted: #6b7280;
+  --accent: #0ea5a4;        /* teal-ish */
+  --accent-700: #0b7f7d;
+  --text: #111827;
+  --card-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+
+  /* Spacing & sizes */
+  --container-max: 1100px;
+  --gap: 1.25rem;
+  --radius: 8px;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --base-size: 16px;
+  --line-height: 1.5;
+}
+
+/* Reset / base */
+html {
+  font-family: var(--font-sans);
+  font-size: var(--base-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  line-height: var(--line-height);
+  background-color: var(--surface);
+  padding: 1.5rem;
+}
+
+/* Container to center content */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+  padding: 1rem 0;
+  margin-bottom: calc(var(--gap) * 1.25);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-brand .logo {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-700));
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: var(--text);
+  background: rgba(14,165,164,0.06);
+  outline: none;
+}
+
+/* Page layout - grid */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+
+/* Main + sidebar */
+.main {
+  display: grid;
+  gap: var(--gap);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gap);
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Article styling */
+article h1, article h2, article h3 {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+article p {
+  margin: 0 0 0.9rem 0;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  min-width: 220px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: calc(var(--gap) * 1.25);
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive images and media */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent-700);
+  border: 1px solid rgba(11,127,125,0.12);
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e6e6e9;
+  background: #fff;
+  font: inherit;
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid rgba(14,165,164,0.18);
+  border-color: var(--accent-700);
+}
+
+/* Small utilities */
+.u-center {
+  text-align: center;
+}
+.u-muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Accessible focus ring */
+:focus {
+  outline: 3px solid rgba(14,165,164,0.14);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 720px) {
+  .page {
+     grid-template-columns: 1fr;
+  }
+
+  .main {
+     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 920px) {
+  .page {
+     grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+     grid-template-columns: 2fr 320px;
+  }
+
+  .site-header {
+     padding: 1rem 1.25rem;
+  }
+
+  .nav {
+     gap: 1.25rem;
+  }
+}
+
+/* Utility grid for cards */
+.row {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 720px) {
+  .row.cols-2 {
+     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .row.cols-3 {
+     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+th, td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #f1f1f2;
+}
+
+/* Tiny print */
+.small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* End of layout.css */
