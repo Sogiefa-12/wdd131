@@ -94,13 +94,25 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  justify-items: center;
 }
 
 .nav a {
+    
   color: var(--muted);
   text-decoration: none;
   padding: 0.35rem 0.5rem;
-  border-radius: 6px;
+  border-radius: 3px;
   font-weight: 600;
   font-size: 0.95rem;
 }
