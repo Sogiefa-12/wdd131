@@ -133,9 +133,24 @@ body {
 }
 
 /* Main + sidebar */
-.main {
-  display: grid;
-  gap: var(--gap);
+main {
+  display: flex;
+  gap: 20px;
+
+padding: 20px
+}
+
+/* Main content */
+main section {
+  flex: 3;
+}
+
+/* Sidebar */
+
+main aside {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 15px;
 }
 
 .grid-2 {
