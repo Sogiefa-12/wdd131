@@ -79,14 +79,49 @@ main .card-container {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: justify;
 }
 
 .card img {
-    max-width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 1rem;
+}
+
+/* About Me Layout */
+
+.about-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: left;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-top img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 8px;
+    justify-self: end;
+}
+
+/* Abuja Nigeria Section */
+.about-location {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.about-location img {
+    width: 100%;
+    height: auto;
+    justify-self: start;
 }
 
 /* Footer Styles */
