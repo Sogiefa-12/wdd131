@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #243447;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    flex-direction: column;
+}
+nav a {
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease color 0.3s ease;
+}
+
+/* Hover Effects */
+nav a:hover {
+    background-color: #ffffff;
+    color: #243447;
+    font-weight: 700;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Temple Gallery (Grid Layout) */
+#temple-photos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Hamburger Button (Mobile) */
+#menu {
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content:"☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* Mobile Navigation */
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    display: none;
+}
+
+.navigation.open a {
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #243447;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
