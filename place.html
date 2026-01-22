@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abuja, Nigeria</title>
+
+    <meta name="description" content="Discover the vibrant culture, stunning landscapes, and unique experiences that Abuja, Nigeria has to offer.">
+    <meta name="keywords" content="Abuja, Nigeria, travel, tourism, culture, landscapes, experiences">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Abuja, Nigeria</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/abuja-small.webp" media="(max-width: 500px)">
+                <source srcset="images/abuja-medium.webp" media="(max-width: 900px)">
+                <img src="images/abuja-large.webp" alt="Cityscape of Abuja Nigeria" width="1200" height="600">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><span class="label">Country:</span> Nigeria</li>
+                <li><span class="label">Capital:</span> Abuja</li>
+                <li><span class="label">Population:</span>  ~3.6 million</li>
+                <li><span class="label">Region:</span> Federal Capital Territory (FCT)</li>
+                <li><span class="label">Latitude:</span> 9.0765° N</li>
+                <li><span class="label">Longitude:</span> 7.3986° E</l>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Partly cloudy icon" class="weather-icon">
+
+            <ul>
+                <li><span class="label">Temperature:</span><span id="temp">5</span>℃</li>
+                <li><span class="label">Wind Speed:</span><span id="speed">20</span>km/h</li>
+                <li><span class="label">Conditions:</span>Partly Cloudy</li>
+                <li><span class="label">Wind Chill:</span><span id="windchill"></span></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> | Sarah Imarhenakhue Ogiefa | Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
