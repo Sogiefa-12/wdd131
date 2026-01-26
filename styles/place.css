@@ -40,8 +40,23 @@ main {
 
 section {
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.weather {
+    text-align: left;
+    justify-self: center;
+    padding: 1.5rem;
+    list-style: none;
+    
+    
+}
+
+.data{
+    justify-self: center;
+
 }
 
 h2 {
@@ -55,34 +70,4 @@ h2 {
 .weather-icon {
     width: 60px;
     margin-bottom: 0.5rem;
-}
-
-@media (min-width: 768px){
-    main {
-        grid-template-columns: 1fr 2fr 1fr;
-        align-items: start;
-    }
-
-    .hero {
-        grid-column: 1 / -1;
-    }
-
-    .data {
-        grid-column: 1 / 2;
-    }
-
-    .weather {
-        grid-column: 3 / 4;
-        position: relative;
-    }
-
-    /* Weather pseudo-element icon */
-    .weather h2::after {
-        content: " ⛅";
-        font-size: 1.5rem;
-    }
-
-    .weather-icon {
-        display: none;
-    }
 }

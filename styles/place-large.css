@@ -1,0 +1,30 @@
+
+@media (min-width: 768px){
+    main {
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: start;
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    .data {
+        grid-column: 1 / 2;
+    }
+
+    .weather {
+        grid-column: 3 / 4;
+        position: relative;
+    }
+
+    /* Weather pseudo-element icon */
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.5rem;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+}
