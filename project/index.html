@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+    <meta name="description" content="A Smart Campus Companion web application to assist students with campus navigation, event updates, and resource management.">
+    <title>Smart Campus Companion</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">Smart Campus Companion</div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="study-spots.html">Study Spots</a>
+            <a href="planner.html">Weekly Planner</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section class="hero">
+            <img src="images/campus.webp" alt="Campus view" loading="lazy">
+        </section>
+
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <a class="btn" href="study-spots.html">Find Study Spots</a>
+            <a class="btn" href="planner.html">Weekly Planner</a>
+            <a class="btn" href="references.html">References</a>
+        </section>
+
+        <section class="welcome">
+            <h2>Welcome</h2>
+            <p id="greeting"></p>
+            <p id="last-visit"></p>
+        </section>
+
+        <section class="announcements">
+            <h2>Annoucements</h2>
+            <p>
+                Stay tuned for upcoming events and important updates on campus!
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Smart Campus Companion. | Sarah Imarhenakhue Ogiefa | <a href="references.html">References</a> All rights reserved.</p>
+        <p><span id="current-date"></span></p>
+    </footer>
+</body>
+</html>
