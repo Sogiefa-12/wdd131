@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="A product review form for WDD 131 that allows users to submit their feedback on a product, including ratings and comments.">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+     <!-- Google Fonts preconnect & link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review </h1>
+
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <!--Product Name-->
+            <label for="product">Product Name </label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a product ...</option>
+            </select>
+
+            <!--Rating-->
+            <fieldset>
+                <legend>Overall Rating</legend>
+
+                <label>
+                    <input type="radio" name="rating" value="1" required>⭐
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2">⭐⭐
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3">⭐⭐⭐
+                </label> 
+                <label>
+                    <input type="radio" name="rating" value="4">⭐⭐⭐⭐
+                </label>   
+                <label>
+                    <input type="radio" name="rating" value="5">⭐⭐⭐⭐⭐
+                </label>
+            </fieldset>
+
+            <!--Date of Installation-->
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+
+            <!--Useful Features-->
+            <fieldset>
+                <legend>Useful Features</legend>
+
+                <label>
+                    <input type="checkbox" id="feature1" name="features" value="Durability">
+                    Durability
+                </label>
+
+                <label>
+                    <input type="checkbox" id="feature2" name="features" value="Ease of use">
+                    Ease of use
+                </label>
+
+                <label>
+                    <input type="checkbox" id="feature3" name="features" value="Performance">
+                    Performance
+                </label>
+            </fieldset>
+
+            <!--Written Review-->
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
+
+            <!--User Name-->
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username" required>
+
+            <!--Submit Button-->
+            <input type="submit" id="button" value="Submit Review">
+        </form>
+    </main> 
+
+    <footer>
+        <p>&copy; 2026 | Sarah Imarhenakhue Ogiefa | WDD 131</p>
+    </footer>
+</body>
+</html>

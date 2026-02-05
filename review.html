@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <meta name="description"
+        content="A product review form for WDD 131 that allows users to submit their feedback on a product, including ratings and comments.">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+    <!-- Google Fonts preconnect & link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Review Submitted</h1>
+        </header>
+
+        <section id="review-summary">
+            <h2>Your Review Summary</h2>
+            <p><strong>Product Name:</strong> <span id="product"></span></p>
+            <p><strong>Overall Rating:</strong> <span id="rating"></span></p>
+            <p><strong>Date of Installation:</strong> <span id="installDate"></span></p>
+            <p><strong>Useful Features:</strong> <span id="features"></span></p>
+            <p><strong>Additional Comments:</strong> <span id="review"></span></p>
+        </section>
+
+        <section id="thank-you">
+            <h2>Thank You for Your Feedback!</h2>
+            <p>You have submitted <span id="count"></span> reviews.</p>
+        </section>    
+    </main>
+</body>
+<footer>
+    <p>&copy; 2026 | Sarah Imarhenakhue Ogiefa | WDD 131</p>
+</footer>
+</html>
