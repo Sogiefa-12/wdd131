@@ -1,13 +1,15 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f8;
     color: #333;
     margin: 4rem;
 }
+
 header h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
+
 main {
     max-width: 600px;
     margin: 0.75rem auto;
@@ -17,50 +19,20 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label, legend {
+label,
+legend {
     font-weight: bold;
     display: block;
     margin-bottom: 0.1rem;
 }
 
-#product {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+/* ---------------- FORM CONTROLS ---------------- */
 
 input,
-select {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-#installDate {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-weight: bold;
-}
-
-#review{
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-
+select,
+#product,
+#installDate,
+#review,
 #username {
     width: 100%;
     padding: 0.5rem;
@@ -70,10 +42,14 @@ select {
     box-sizing: border-box;
 }
 
+#installDate {
+    font-weight: bold;
+}
+
 #button {
     width: 100%;
     background-color: #15411f;
-    color: white;
+    color: #fff;
     font-weight: bold;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -82,6 +58,8 @@ select {
     font-size: 1rem;
 }
 
+/* ---------------- FIELDSET ---------------- */
+
 fieldset {
     border: 1px solid #ccc;
     padding: 1rem;
@@ -89,7 +67,21 @@ fieldset {
     border-radius: 4px;
 }
 
-/* Review Summary Section */
+/* Radio & checkbox alignment */
+fieldset .row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    margin: 0;
+}
+
+/* ---------------- REVIEW SUMMARY ---------------- */
+
 #review-summary {
     border-top: 1rem solid #ddd;
     padding-top: 1rem;
@@ -118,6 +110,8 @@ fieldset {
     color: #333;
 }
 
+/* ---------------- FOOTER ---------------- */
+
 footer {
     text-align: center;
     margin-top: 2rem;
@@ -125,32 +119,8 @@ footer {
     color: #777;
 }
 
-/* ----------- RADIO & CHECKBOX ALIGNMENT (TIGHT) ----------- */
+/* ---------------- RESPONSIVE ---------------- */
 
-fieldset {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-}
-
-/* Make each radio/checkbox line sit on its own row */
-fieldset .row {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    /* small spacing between input and text */
-    margin-bottom: 0.25rem;
-}
-
-/* Remove default spacing from inputs */
-fieldset input[type="radio"],
-fieldset input[type="checkbox"] {
-    margin: 0;
-}
-
-
-/* Responsive Design */
 @media (max-width: 600px) {
     body {
         margin: 1rem;
