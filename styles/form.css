@@ -28,7 +28,10 @@ legend {
 
 /* ---------------- FORM CONTROLS ---------------- */
 
-input,
+/* Only apply width to text-like inputs */
+input[type="text"],
+input[type="date"],
+textarea,
 select,
 #product,
 #installDate,
@@ -70,13 +73,22 @@ fieldset {
 /* Radio & checkbox alignment */
 fieldset .row {
     display: flex;
+    /* required */
     align-items: center;
     gap: 0.4rem;
     margin-bottom: 0.25rem;
 }
 
+fieldset .row label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+}
+
 fieldset input[type="radio"],
 fieldset input[type="checkbox"] {
+    width: auto;
+    /* IMPORTANT */
     margin: 0;
 }
 
