@@ -1,43 +1,44 @@
-const greetingEl = document.getElementById('greeting');
-const lastVisitEl = document.getElementById('last-visit');
+const greetingElement = document.querySelector('#greeting');
+const lastVisitElement = document.querySelector('#last-visit');
+const dateElement = document.querySelector('#current-date');
 
-function getGreeting() {
-    const hour = new Date().getHours();
-    if (hour < 12) return 'Good morning';
-    if (hour < 18) return 'Good afternoon';
-    return 'Good evening';
+// Function: display current date in footer
+function displayCurrentDate() {
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long"
+    });
+
+    dateElement.textContent = `Today is ${formattedDate}`;
 }
 
-function displayLastVisit() { 
+// Function: display greeting based on last visit
+
+function displayGreeting() {
     const lastVisit = localStorage.getItem('lastVisit');
-    if (lastVisit) {
-        lastVisitEl.textContent = `last visit: ${lastVisit}`;
-    }
-    else {
-        lastVisitEl.textContent = 'This is your first visit!';
-    }
-}
+    const now = Date.now();
 
-function saveVisit() {
-    const now = new Date().toLocaleString();
+    if (!lastVisit || Number.isNaN(Number(lastVisit))) {
+        greetingElement.textContent = `Welcome to Smart Campus Companion! We're glad you're here.`;
+        lastVisitElement.textContent = `This is your first visit!`;
+    } else {
+        const daysSinceVisit = Math.floor(
+            (now - Number(lastVisit)) / (1000 * 60 * 60 * 24)
+        );
+
+        greetingElement.textContent = `Welcome back!`;
+        lastVisitElement.textContent = `It's been ${daysSinceVisit} day(s) since your last visit.`;
+    }
+
     localStorage.setItem('lastVisit', now);
 }
 
-function initHome() {
-    greetingEl.textContent = getGreeting();
-    displayLastVisit();
-    saveVisit();
-}
 
-function displayCurrentDate() { 
-    const dateEl = document.getElementById('current-date');
-    const today = new Date();
-    const formattedDate = today.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    dateEl.textContent = `Today is ${formattedDate}`;
-}
-
-
-window.addEventListener('DOMContentLoaded', () => { 
+// Run functions on page load
+window.addEventListener('DOMContentLoaded', () => {
     displayCurrentDate();
-    initHome();
+    displayGreeting();
 });

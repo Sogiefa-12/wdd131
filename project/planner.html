@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organize your weekly class schedule and activities">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+    <title>Weekly Planner | Smart Campus Companion</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="htpps://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Styles-->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="scripts/planner.js" defer> </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Smart Campus Companion</h1>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="study-spots.html">Study Spots</a></li>
+                <li><a href="planner.html" aria-current="page">Weekly Planner</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>Weekly Planner</h2>
+            <p>Add your classes and activities for the week.</p>
+        </section>
+
+        <section>
+            <form id="planner-form">
+                <label for="activity">Activity:</label>
+                <input type="text" id="activity" required>
+
+                <label for="day">Day:</label>
+                <select  id="day" required>
+                    <option value="">Select a day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+
+                <button type="submit" class="btn"> Add Activity</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Your Schedule</h3>
+            <div id="schedule-container"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 Smart Campus Companion |
+            Sarah Imarhenakhue Ogiefa |
+            <a href="references.html">References</a>
+
+        </p>
+    </footer>
+</body>
+</html>

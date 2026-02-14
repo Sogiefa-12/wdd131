@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sarah Imarhenakhue Ogiefa">
-    <meta name="description" content="A Smart Campus Companion web application to assist students with campus navigation, event updates, and resource management.">
+    <meta name="description"
+        content="Smart Campus Companion helps students find study spots, plan weekly schedules, and manage campus life efficiently.">
+
     <title>Smart Campus Companion</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- JavaScript -->
     <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
     <header class="site-header">
-        <div class="brand">Smart Campus Companion</div>
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="study-spots.html">Study Spots</a>
-            <a href="planner.html">Weekly Planner</a>
-            <a href="references.html">References</a>
+        <div class="brand">
+            <h1>Smart Campus Companion</h1>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="study-spots.html">Study Spots</a></li>
+                <li><a href="planner.html">Weekly Planner</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
         </nav>
     </header>
 
     <main class="home-grid">
         <section class="hero">
-            <img src="images/campus.webp" alt="Campus view" loading="lazy">
+            <img src="images/campus.webp"
+                alt="A scenic view of the university campus with academic buildings and walkways" loading="lazy">
         </section>
 
         <section class="quick-links">
@@ -43,7 +61,7 @@
         </section>
 
         <section class="announcements">
-            <h2>Annoucements</h2>
+            <h2>Announcements</h2>
             <p>
                 Stay tuned for upcoming events and important updates on campus!
             </p>
@@ -51,8 +69,15 @@
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Smart Campus Companion. | Sarah Imarhenakhue Ogiefa | <a href="references.html">References</a> All rights reserved.</p>
-        <p><span id="current-date"></span></p>
+        <p>
+            &copy; 2026 Smart Campus Companion |
+            Sarah Imarhenakhue Ogiefa |
+            <a href="references.html">References</a>
+        </p>
+        <p>
+            <span id="current-date"></span>
+        </p>
     </footer>
 </body>
+
 </html>

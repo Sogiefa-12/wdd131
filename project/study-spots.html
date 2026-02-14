@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+    <meta name="description" content="Find quiet and group-friendly study spots on campus.">
+
+    <title>Study Spots | Smart Campus Companion</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/studyspots.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Smart Campus Companion</h1>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="study-spots.html" aria-current="page">Study Spots</a></li>
+                <li><a href="planner.html">Weekly Planner</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>Study Spots</h2>
+            <p>Discover the best places on campus to study based on your needs.</p>
+        </section>
+
+        <section class="filters">
+            <button class="btn" data-filter="all">All</button>
+            <button class="btn" data-filter="quiet">Quiet</button>
+            <button class="btn" data-filter="group">Group</button>
+        </section>
+
+        <section id="spots-container" class="spots-grid">
+            <!-- JavaScript will inject study spots here -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 Smart Campus Companion |
+            Sarah Imarhenakhue Ogiefa |
+            <a href="references.html">References</a>
+        </p>
+    </footer>
+</body>
+
+</html>
